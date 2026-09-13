@@ -8,7 +8,7 @@
 ## 🎯 Problem
 
 Telecom companies lose revenue when customers churn without warning.
-This project explores customer behaviour through **three complementary lenses**:
+This project explores customer behavior through **three complementary lenses**:
 unsupervised clustering, anomaly detection, and supervised classification —
 to understand who churns, who behaves unusually, and how to predict churn.
 
@@ -17,20 +17,20 @@ to understand who churns, who behaves unusually, and how to predict churn.
 ## 🔍 What's Inside
 
 ### 1. 🔵 Clustering — K-Means
-- Standardised features with `StandardScaler`
+- Standardized features with `StandardScaler`
 - Applied **K-Means** (k=3) to segment customers into behavioural groups
 - Visualised clusters using **PCA** (2D projection)
 
 ### 2. 🔴 Anomaly Detection — Local Outlier Factor (LOF)
 - Applied **LOF** to detect customers with unusual usage patterns
-- Visualised outliers vs. inliers in PCA-reduced 2D space
+- Visualized outliers vs. inliers in PCA-reduced 2D space
 - Flagged anomalous records for further inspection
 
 ### 3. 🟢 Classification — Decision Tree
 - Target: `Churn` (binary)
 - Train/test split (80/20, random_state=42)
 - **Decision Tree Classifier** with full evaluation:
-  - Confusion Matrix (visualised with `ConfusionMatrixDisplay`)
+  - Confusion Matrix (visualized with `ConfusionMatrixDisplay`)
   - Classification Report (precision, recall, F1)
 
 ---
@@ -42,7 +42,7 @@ telecom_churn_analysis/
 │
 ├── telecom_churn_analysis/
 │   ├── Varaga_HAghoubians_DM_Project_2025.ipynb   ← main notebook
-│   └── Varaga_Haghoubians_Data_minig_project.pdf  ← full written report
+│   └── Varaga_Haghoubians_Data_mining_project.pdf  ← full written report
 └── README.md
 ```
 
