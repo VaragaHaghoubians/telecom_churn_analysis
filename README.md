@@ -9,24 +9,24 @@
 
 Telecom companies lose revenue when customers churn without warning.
 This project explores customer behavior through **three complementary lenses**:
-unsupervised clustering, anomaly detection, and supervised classification —
+unsupervised clustering, anomaly detection, and supervised classification,
 to understand who churns, who behaves unusually, and how to predict churn.
 
 ---
 
 ## 🔍 What's Inside
 
-### 1. 🔵 Clustering — K-Means
+### 1. 🔵 Clustering; K-Means
 - Standardized features with `StandardScaler`
 - Applied **K-Means** (k=3) to segment customers into behavioural groups
 - Visualised clusters using **PCA** (2D projection)
 
-### 2. 🔴 Anomaly Detection — Local Outlier Factor (LOF)
+### 2. 🔴 Anomaly Detection; Local Outlier Factor (LOF)
 - Applied **LOF** to detect customers with unusual usage patterns
 - Visualized outliers vs. inliers in PCA-reduced 2D space
 - Flagged anomalous records for further inspection
 
-### 3. 🟢 Classification — Decision Tree
+### 3. 🟢 Classification; Decision Tree
 - Target: `Churn` (binary)
 - Train/test split (80/20, random_state=42)
 - **Decision Tree Classifier** with full evaluation:
@@ -73,7 +73,7 @@ jupyter notebook
 
 Open `Varaga_HAghoubians_DM_Project_2025.ipynb` and run all cells.
 
-> **Dataset:** Iranian Telecom Churn — available from the
+> **Dataset:** Iranian Telecom Churn: available from the
 > [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Iranian+Churn+Dataset).
 > Place `Customer Churn.csv` in the same folder as the notebook.
 
@@ -81,5 +81,5 @@ Open `Varaga_HAghoubians_DM_Project_2025.ipynb` and run all cells.
 
 ## 👤 Author
 
-**Varaga Haghoubians** — Junior ML/AI Engineer & Data Analyst
+**Varaga Haghoubians**, Junior ML/AI Engineer & Data Analyst
 [LinkedIn](https://www.linkedin.com/in/varagahaghoubians) · [GitHub](https://github.com/VaragaHaghoubians) · [varaga.haghoubians@gmail.com](mailto:varaga.haghoubians@gmail.com)
