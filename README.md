@@ -33,6 +33,8 @@ to understand who churns, who behaves unusually, and how to predict churn.
   - Confusion Matrix (visualized with `ConfusionMatrixDisplay`)
   - Classification Report (precision, recall, F1)
 
+Saved test output, not re-run here: accuracy 91.4% (576/630), churn recall 64.6% (64/99), churn precision 77%. Majority-class accuracy on this split is about 84%, so accuracy alone is a weak claim.
+
 ---
 
 ## 📁 Project Structure
