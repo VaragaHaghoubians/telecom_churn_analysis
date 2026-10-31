@@ -1,87 +1,48 @@
-# 📉 Telecom Customer Churn Analysis
+# Telecom Customer Churn Analysis
 
-> A data mining project applying clustering, anomaly detection, and classification
-> to the Iranian Telecom Churn dataset (UCI Machine Learning Repository).
+A data mining project from my MSc in Data Science at the University of Turin. I used the Iranian Telecom Churn dataset (UCI) and looked at customers in three ways: grouping them, finding unusual ones, and predicting who will leave.
 
----
+## What I did
 
-## 🎯 Problem
+1. Clustering with K-Means (k=3) on standardized features, shown in 2D with PCA
+2. Anomaly detection with Local Outlier Factor (LOF), to flag customers with unusual usage
+3. Churn prediction with a depth-5 decision tree, 80/20 train/test split
 
-Telecom companies lose revenue when customers churn without warning.
-This project explores customer behavior through **three complementary lenses**:
-unsupervised clustering, anomaly detection, and supervised classification,
-to understand who churns, who behaves unusually, and how to predict churn.
+## Results
 
----
+From the saved notebook run:
 
-## 🔍 What's Inside
+| Metric | Value |
+|---|---|
+| Test accuracy | 91.4% (576/630) |
+| Churn recall | 64.6% (64/99) |
+| Churn precision | 77% |
 
-### 1. 🔵 Clustering; K-Means
-- Standardized features with `StandardScaler`
-- Applied **K-Means** (k=3) to segment customers into behavioural groups
-- Visualised clusters using **PCA** (2D projection)
+Only about 16% of customers in the test set churn, so always predicting "no churn" would already give about 84% accuracy. That is why I look at churn recall and precision, not only accuracy. The model finds about 2 out of 3 churners.
 
-### 2. 🔴 Anomaly Detection; Local Outlier Factor (LOF)
-- Applied **LOF** to detect customers with unusual usage patterns
-- Visualized outliers vs. inliers in PCA-reduced 2D space
-- Flagged anomalous records for further inspection
+## Files
 
-### 3. 🟢 Classification; Decision Tree
-- Target: `Churn` (binary)
-- Train/test split (80/20, random_state=42)
-- **Decision Tree Classifier** with full evaluation:
-  - Confusion Matrix (visualized with `ConfusionMatrixDisplay`)
-  - Classification Report (precision, recall, F1)
+- `telecom_churn_analysis.ipynb`, the notebook with all the code
+- `telecom_churn_report.pdf`, the written report
 
-Saved test output, not re-run here: accuracy 91.4% (576/630), churn recall 64.6% (64/99), churn precision 77%. Majority-class accuracy on this split is about 84%, so accuracy alone is a weak claim.
-
----
-
-## 📁 Project Structure
-
-```
-telecom_churn_analysis/
-│
-├── telecom_churn_analysis/
-│   ├── Varaga_HAghoubians_DM_Project_2025.ipynb   ← main notebook
-│   └── Varaga_Haghoubians_Data_mining_project.pdf  ← full written report
-└── README.md
-```
-
----
-
-## 🛠️ Tech Stack
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat-square)
-![Seaborn](https://img.shields.io/badge/Seaborn-4c72b0?style=flat-square)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
-
-**Methods:** K-Means · PCA · Local Outlier Factor · Decision Tree · Confusion Matrix · Classification Report
-
----
-
-## 🚀 How to Run
+## How to run
 
 ```bash
 git clone https://github.com/VaragaHaghoubians/telecom_churn_analysis.git
 cd telecom_churn_analysis
-pip install pandas numpy scikit-learn matplotlib seaborn
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
 jupyter notebook
 ```
 
-Open `Varaga_HAghoubians_DM_Project_2025.ipynb` and run all cells.
+The dataset is not included. Download it from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset), save it as `Customer Churn.csv` in the same folder as the notebook, then run all cells.
 
-> **Dataset:** Iranian Telecom Churn: available from the
-> [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Iranian+Churn+Dataset).
-> Place `Customer Churn.csv` in the same folder as the notebook.
+## What I would improve next
 
----
+- Compare the decision tree with logistic regression and random forest
+- Tune the decision threshold to catch more churners
+- Use cross-validation instead of a single split
 
-## 👤 Author
+## Author
 
-**Varaga Haghoubians**, Junior ML/AI Engineer & Data Analyst
-[LinkedIn](https://www.linkedin.com/in/varagahaghoubians) · [GitHub](https://github.com/VaragaHaghoubians) · [varaga.haghoubians@gmail.com](mailto:varaga.haghoubians@gmail.com)
+Varaga Haghoubians, MSc Stochastics & Data Science student, University of Turin, Industrial Engineering background
+[LinkedIn](https://www.linkedin.com/in/varagahaghoubians) · [varaga.haghoubians@gmail.com](mailto:varaga.haghoubians@gmail.com)
